@@ -1,0 +1,127 @@
+@media screen and (max-width: 499px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/hero-image_3-small.jpg");
+    background-position: center;
+    background-color: green;
+  }
+  .search {
+    margin: 10px;
+    padding: 5px;
+    width: 30%;
+    height: 2em;
+    border-radius: 1em;
+  }
+  .form-search {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .drawer {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 40%;
+    bottom: 0;
+    background-color: #1d3748;
+    transform: translate(-500px, 0);
+    transition: transform 0.3s ease;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 200px;
+    position: absolute;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../public/images/hero-image_3-large.jpg");
+    background-position: center;
+    background-color: green;
+  }
+  .header__menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 650px) {
+  .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movie {
+    grid-template-columns: auto 1fr;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  .movie .movie__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .movie .movie__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 1em;
+  }
+
+  footer #footerTools {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .movies {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
